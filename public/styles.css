@@ -97,12 +97,19 @@ body {
 }
 
 main {
-  background-color: #0a0303;
   position: relative;
 }
 
 main .container {
-  min-height: 100vh;
+  height: 60rem;
+}
+
+main .container > h1 {
+  text-align: center;
+  position: relative;
+  top: 4rem;
+  font-size: 4rem;
+  color: #000;
 }
 
 main .container .my-image {
@@ -149,93 +156,53 @@ main .container .socials img {
 }
 
 main .container .text {
-  color: #111111;
+  color: #000;
   padding: 4rem;
 }
 
 main .container .text h1 {
   font-size: 3.5rem;
   font-family: Poppins;
+  color: #000;
 }
 
 main .container .text p {
   font-size: 2rem;
   display: inline-block;
+  color: #000;
 }
 
 main .container .text p span {
   font-weight: bolder;
+  color: #000;
 }
 
 main .container .text span.typed-cursor {
   font-size: 2rem;
-}
-
-main .container .text > button {
-  display: inline-block;
-  background-color: #222;
-  color: #fff;
-  border: none;
-  padding: 1rem 2rem;
-  margin-top: 3rem;
-  font-family: Poppins;
-  font-size: 2rem;
-  text-decoration: none;
-}
-
-#dro-svg {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-#dro-svg path:nth-child(1) {
-  stroke-dasharray: 158;
-  stroke-dashoffset: 158;
-}
-
-#dro-svg path:nth-child(2) {
-  stroke-dasharray: 239;
-  stroke-dashoffset: 239;
-}
-
-#dro-svg path:nth-child(3) {
-  stroke-dasharray: 258;
-  stroke-dashoffset: 258;
-}
-
-#dro-svg path:nth-child(4) {
-  stroke-dasharray: 286;
-  stroke-dashoffset: 286;
-}
-
-#dro-svg path:nth-child(5) {
-  stroke-dasharray: 124;
-  stroke-dashoffset: 124;
-}
-
-#dro-svg path:nth-child(6) {
-  stroke-dasharray: 217;
-  stroke-dashoffset: 217;
+  color: #000;
 }
 
 .projects {
   background-color: #fff;
   position: relative;
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.projects h2 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem 0;
+  color: #000;
 }
 
 .projects .project {
   width: 100%;
-  height: 100vh;
   position: relative;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #b2abe0;
-  -webkit-box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .projects .project > img {
@@ -243,58 +210,24 @@ main .container .text > button {
   height: 20rem;
 }
 
-.projects .project span.arrow {
-  font-size: 3rem;
-  margin-top: 1rem;
-  display: inline-block;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  -webkit-animation: arrowDown 1s ease-in-out 0s infinite alternate;
-          animation: arrowDown 1s ease-in-out 0s infinite alternate;
-}
-
-@-webkit-keyframes arrowDown {
-  from {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
-  to {
-    -webkit-transform: translate(-50%, 40px);
-            transform: translate(-50%, 40px);
-  }
-}
-
-@keyframes arrowDown {
-  from {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
-  to {
-    -webkit-transform: translate(-50%, 40px);
-            transform: translate(-50%, 40px);
-  }
-}
-
 .projects .project .extras {
-  position: absolute;
-  bottom: 10rem;
-  left: 50%;
-  width: 90%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  padding: 1rem;
 }
 
 .projects .project .extras .links {
-  width: 120px;
-  margin: 1rem auto;
+  width: 90px;
+  margin: 1rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.projects .project .extras .links a {
+  color: #000;
+  z-index: 1;
 }
 
 .projects .project .extras .links a img {
@@ -304,14 +237,14 @@ main .container .text > button {
 
 .projects .project .extras p {
   font-size: 2rem;
-  text-align: center;
+  color: #000;
 }
 
 .projects .project .extras p.title {
   text-transform: uppercase;
   font-size: 2rem;
   letter-spacing: 10px;
-  margin-bottom: 3rem;
+  color: #000;
 }
 
 .about {
@@ -351,8 +284,8 @@ main .container .text > button {
 }
 
 .contact {
-  background-color: #4158D0;
-  background-image: linear-gradient(315deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-color: #4158d0;
+  background-image: linear-gradient(315deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
   background-size: 400% 400%;
   padding: 2rem;
   padding-bottom: 0;
@@ -541,20 +474,10 @@ p.success {
 @media screen and (min-width: 600px) {
   main .container {
     width: 100%;
-    padding-top: 15rem;
     position: relative;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url(./img/dro2.jpg);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(./img/dro2.jpg);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   main .container .my-image {
-    display: none;
-    position: static;
-    left: auto;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    padding-top: 8rem;
   }
   main .container .my-image > img {
     width: 20rem;
@@ -564,7 +487,7 @@ p.success {
   main .container .my-image::before {
     content: "";
     position: absolute;
-    top: 17rem;
+    top: 10rem;
     left: -2rem;
     z-index: -1;
     height: 20rem;
@@ -575,11 +498,6 @@ p.success {
   main .container .text {
     width: 60%;
     display: block;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
     text-align: center;
   }
   main .container .text h1 {
@@ -680,5 +598,32 @@ p.success {
   .about article p {
     text-align: left;
   }
+}
+
+.hng {
+  padding: 5rem 2rem;
+}
+
+.hng img {
+  width: 80%;
+  margin: 0 auto 1rem;
+  display: block;
+}
+
+.hng h2 {
+  color: #000;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.hng p {
+  color: #000;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.hng p a {
+  color: blue;
 }
 /*# sourceMappingURL=styles.css.map */
